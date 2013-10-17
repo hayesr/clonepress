@@ -1,0 +1,32 @@
+<div class="post">
+  <h2><%= @post.title %></h2>
+  
+  <div class="content">
+    <%= simple_format @post.body %>
+  </div>
+</div>
+
+<div class="comments">
+  <% @post.comments.each do |comment| %>
+  <div class="comment">
+    <div class="author"><%= comment.author %></div>
+    <div class="content">
+      <%= simple_format comment.body %>
+    </div>
+    <div class="meta">
+      <%= comment.created_at %>
+    </div>
+  </div>
+  <% end %>
+  
+  <%= form_for([@post, Comment.new]) do |f| %>
+    <%= f.text_field :author, placeholder: "Your name" %><br>
+    <%= f.text_area :body, placeholder: "Comment" %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
