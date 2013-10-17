@@ -9,4 +9,9 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Clonepress::Application.config.secret_key_base = 'fcb5af7881018786c75702f179ad7ae5221943c96a1caf04e99d501583c7e9d70ba0138c48927d0bee4d1a93f5b826c481e5ca503be9e778b587a7dfa727c8a8'
+if Rails.env.development? or Rails.env.test?
+  secret = ('x' * 30)
+else
+  secret = ENV['RAILS_SESSION_SECRET']
+end
+Clonepress::Application.config.secret_key_base = secret
