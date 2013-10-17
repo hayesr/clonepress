@@ -1,9 +1,0 @@
-== ClonePress
-This is (or will be) a feature-clone of Wordpress. This is the first group learning project for the [Santa Clarita Valley Web Geeks Meetup](http://www.meetup.com/scv-web-geeks/).
-
-=== Installation
-(coming)
-
-==== Future Plans
-* Integrate Bootstrap
-* Develop a Contenteditible-based editor
