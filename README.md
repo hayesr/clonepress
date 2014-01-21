@@ -9,8 +9,7 @@ This is the first group learning project for the [Santa Clarita Valley Web Geeks
 ## Deploying
 First of all, this isn't ready for prime-time, but …
 
-The production environment expects a RAILS_SESSION_SECRET env variable with a random key. 
-Generate with `rake secret` and set using a .env file (dotenv gem) or use Heroku Config Vars.
+This project has been updated for Rails 4.1 beta and uses `config/secrets.yml`. [(release notes)](http://edgeguides.rubyonrails.org/4_1_release_notes.html#config-secrets-yml)
 
 ## Contributing
 Fork it, make a feature branch, send a pull request.
