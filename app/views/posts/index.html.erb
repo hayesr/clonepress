@@ -1,20 +1,25 @@
 
-
-<div class="posts">
+<div class="row">
+  <div class="medium-8 columns medium-centered">
+    <div class="posts">
   
-  <% @posts.each do |post| %>
-    <div class="post">
-      <h3><%= link_to post.title, post %></h3>
-      <div class="content">
-        <%= simple_format post.body %>
-      </div>
-      <div class="actions">
-        <%= link_to 'Edit', edit_post_path(post) %> | 
-        <%= link_to('Destroy', post, class: 'button', method: :delete, data: { confirm: 'Are you sure?', foo: "bar" }) %>
-      </div>
+      <% @posts.each do |post| %>
+        <div class="post">
+          <h3><%= link_to post.title, post %></h3>
+          <div class="content">
+            <%= simple_format post.body %>
+          </div>
+          <div class="actions">
+            <%= link_to 'Edit', edit_post_path(post) %> | 
+            <%= link_to('Destroy', post, method: :delete, data: { confirm: 'Are you sure?', foo: "bar" }) %>
+          </div>
+        </div>
+      <% end %>
+  
     </div>
-  <% end %>
-  
+    
+  </div>
 </div>
+
 
 <%= link_to 'New Post', new_post_path %>
