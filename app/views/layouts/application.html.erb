@@ -7,17 +7,48 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <% if signed_in? %>
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">ClonePress</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
 
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><%= link_to 'New Post', new_post_path %></li>
+        <li class="has-dropdown">
+          <a href="#"><%= current_user.email %></a>
+          <ul class="dropdown">
+            <li><%= link_to 'Sign-out', destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <% end %>
+  
   <% if flash.any? %>
   <div class="messages">
     <% flash.each do |k,v| %>
-    <div class="<%= k %>">
+    <div class="alert-box radius <%= k %>" data-alert>
       <%= v %>
     </div>
     <% end %>
   </div>
   <% end %>
-<%= yield %>
+  
+  <%= yield %>
+  
+  <footer>
+    <% unless signed_in? %>
+      <%= link_to 'Sign-in', new_user_session_path %>
+    <% end %>
+  </footer>
 
 </body>
 </html>

@@ -9,10 +9,12 @@
           <div class="content">
             <%= simple_format post.body %>
           </div>
+          <% if signed_in? %>
           <div class="actions">
             <%= link_to 'Edit', edit_post_path(post) %> | 
             <%= link_to('Destroy', post, method: :delete, data: { confirm: 'Are you sure?', foo: "bar" }) %>
           </div>
+          <% end %>
         </div>
       <% end %>
   
@@ -20,6 +22,3 @@
     
   </div>
 </div>
-
-
-<%= link_to 'New Post', new_post_path %>
