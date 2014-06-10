@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0.beta1'
+gem 'rails', '4.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -29,6 +29,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
+
+gem 'sir_trevor_rails', path: '~/code/github/sir-trevor-rails', branch: 'redesign-gem'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
