@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1'
@@ -31,6 +32,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'devise'
 
 gem 'sir_trevor_rails', path: '~/code/github/sir-trevor-rails', branch: 'redesign-gem'
+
+gem 'rails-assets-Eventable'
+gem 'rails-assets-underscore'
+gem 'rails-assets-sir-trevor'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

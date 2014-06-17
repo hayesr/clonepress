@@ -15,4 +15,7 @@
 //= require turbolinks
 //= require foundation
 //= require foundation_init
+//= require underscore
+//= require Eventable
+//= require sir-trevor
 //  require_tree .

@@ -2,6 +2,9 @@
 This is (or will be) a feature-clone of Wordpress. 
 This is the first group learning project for the [Santa Clarita Valley Web Geeks Meetup](http://www.meetup.com/scv-web-geeks/).
 
+## This Branch
+... demonstrates the integration of [Sir-Trevor](http://madebymany.github.io/sir-trevor-js/), using their 'redesign-gem' branch for maximum Rails 4.1 compat.
+
 ## Installation
 1. Install gems by running `bundle install` from the commandline
 1. Setup development and test databases by running `rake db:setup`
@@ -14,6 +17,4 @@ This project has been updated for Rails 4.1 beta and uses `config/secrets.yml`. 
 ## Contributing
 Fork it, make a feature branch, send a pull request.
 
-### Future Plans
-* Integrate Bootstrap
-* Develop a Contenteditible-based editor
+

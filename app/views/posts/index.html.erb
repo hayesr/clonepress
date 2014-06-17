@@ -7,7 +7,7 @@
         <div class="post">
           <h3><%= link_to post.title, post %></h3>
           <div class="content">
-            <%= simple_format post.body %>
+            <%= render post.body %>
           </div>
           <% if signed_in? %>
           <div class="actions">
