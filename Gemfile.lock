@@ -1,5 +1,7 @@
-PATH
-  remote: ~/code/github/sir-trevor-rails
+GIT
+  remote: git://github.com/hayesr/sir-trevor-rails.git
+  revision: 7edcb63880a147f3fd4780053dc6c317369d10a5
+  branch: redesign-gem
   specs:
     sir_trevor_rails (0.4.0)
       redcarpet (~> 2.0.1)

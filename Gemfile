@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
 
-gem 'sir_trevor_rails', path: '~/code/github/sir-trevor-rails', branch: 'redesign-gem'
+gem 'sir_trevor_rails', github: 'hayesr/sir-trevor-rails', branch: 'redesign-gem'
 
 gem 'rails-assets-Eventable'
 gem 'rails-assets-underscore'
